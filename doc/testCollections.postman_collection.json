@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "4431b7d2-e6f0-4fbe-9e4a-1482f5bfa1c3",
+		"name": "testCollections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/voucher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "end_date",
+							"value": "2019-1-11",
+							"type": "text"
+						},
+						{
+							"key": "star_date",
+							"value": "2018-1-1",
+							"type": "text"
+						},
+						{
+							"key": "discount_tier",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/voucher",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"voucher"
+					]
+				},
+				"description": "Create voucher\nDiscount tier - when given voucher will be associate with discount tier\nProduct id - when given voucher is bind to product"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_ONLY_VOUCHER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "end_date",
+							"value": "2019-1-11",
+							"type": "text"
+						},
+						{
+							"key": "star_date",
+							"value": "2018-1-1",
+							"type": "text"
+						},
+						{
+							"key": "discount_tier",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "product_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/voucher",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"voucher"
+					]
+				},
+				"description": "Create voucher\n"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_VOUCHER_WITH_DISCOUNT_TIER",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "end_date",
+							"value": "2019-1-11",
+							"type": "text"
+						},
+						{
+							"key": "star_date",
+							"value": "2018-1-1",
+							"type": "text"
+						},
+						{
+							"key": "discount_tier",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "product_id",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/voucher",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"voucher"
+					]
+				},
+				"description": "Create voucher\n"
+			},
+			"response": []
+		},
+		{
+			"name": "GET PRODUCT INFO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/product/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE_PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "novi_product",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/product",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "REMOVE VOUCHER",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/voucher/13",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"voucher",
+						"13"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
